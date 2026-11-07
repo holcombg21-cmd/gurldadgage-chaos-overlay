@@ -1,134 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GurlDadGage Chaos Overlay</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: transparent;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .overlay-wrap {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 20px; /* change if you want it higher/lower */
-      width: 100%;
-      overflow: hidden;
-      pointer-events: none;
-    }
-
-    .ticker-shell {
-      width: 100%;
-      padding: 10px 0;
-      background: rgba(20, 6, 30, 0.78);
-      border-top: 2px solid #b55cff;
-      border-bottom: 2px solid #b55cff;
-      box-shadow:
-        0 0 18px rgba(181, 92, 255, 0.45),
-        inset 0 0 16px rgba(181, 92, 255, 0.18);
-      overflow: hidden;
-      white-space: nowrap;
-    }
-
-    .ticker-track {
-      display: inline-flex;
-      align-items: center;
-      white-space: nowrap;
-      will-change: transform;
-      animation: scroll-left 28s linear infinite;
-    }
-
-    .ticker-group {
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .ticker-item {
-      display: inline-flex;
-      align-items: center;
-      margin-right: 38px;
-      color: #ffffff;
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: 0.5px;
-      text-shadow: 0 0 8px rgba(181, 92, 255, 0.7);
-    }
-
-    .emoji {
-      margin-right: 10px;
-      font-size: 30px;
-    }
-
-    .divider {
-      color: #c98cff;
-      margin-right: 38px;
-      font-size: 26px;
-      font-weight: 900;
-      text-shadow: 0 0 8px rgba(201, 140, 255, 0.8);
-    }
-
-    @keyframes scroll-left {
-      0% {
-        transform: translateX(0%);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="overlay-wrap">
-    <div class="ticker-shell">
-      <div class="ticker-track" id="tickerTrack">
-        <div class="ticker-group" id="tickerGroupA"></div>
-        <div class="ticker-group" id="tickerGroupB"></div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const items = [
-      { emoji: "🍎", text: "JOIN THE GNG" },
-      { emoji: "🐺", text: "HYDRATE PLS" },
-      { emoji: "🫶", text: "MUCH LOVE" },
-      { emoji: "🛠️", text: "G4R3DN TOOL" },
-      { emoji: "🚀", text: "BLAST OFF" },
-      { emoji: "💥", text: "CHAOS MODE" },
-      { emoji: "🔫", text: "AMMO DROP" },
-      { emoji: "🌙", text: "LOW GRAVITY" }
-    ];
-
-    function buildTicker(groupId) {
-      const group = document.getElementById(groupId);
-
-      items.forEach((item, index) => {
-        const wrap = document.createElement("div");
-        wrap.className = "ticker-item";
-        wrap.innerHTML = `<span class="emoji">${item.emoji}</span><span>${item.text}</span>`;
-        group.appendChild(wrap);
-
-        const divider = document.createElement("div");
-        divider.className = "divider";
-        divider.textContent = "✦";
-        group.appendChild(divider);
-      });
-    }
-
-    buildTicker("tickerGroupA");
-    buildTicker("tickerGroupB");
-  </script>
-</body>
-</html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GurlDadGage — Chaos Lab LIVE Gift Ticker</title>
+<style>
+:root{--speed:72;--height:84px;--ink:#f8f2ff;--purple:#ac68ff;--bg:rgba(12,5,25,.88)}
+*{box-sizing:border-box}html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:transparent;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+.ticker{position:absolute;left:0;right:0;bottom:0;height:var(--height);display:flex;align-items:stretch;border-top:2px solid #ae71ff;border-bottom:2px solid #8b48e3;background:linear-gradient(180deg,rgba(44,17,74,.94),var(--bg));box-shadow:0 0 24px rgba(148,68,255,.45),inset 0 0 18px rgba(121,67,211,.2);overflow:hidden}
+.brand{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;flex:none;min-width:206px;padding:8px 18px 9px;background:linear-gradient(105deg,#5e259e,#33115d);border-right:2px solid #bc82ff;box-shadow:8px 0 22px rgba(8,2,14,.8);white-space:nowrap}
+.brand .name{font-size:18px;font-weight:900;letter-spacing:1px;text-shadow:0 0 14px rgba(233,195,255,.5)}.brand .sub{font-size:12px;color:#e6c8ff;letter-spacing:1.9px;font-weight:700;margin-top:6px}
+.viewport{min-width:0;flex:1;overflow:hidden;display:flex;align-items:center;mask-image:linear-gradient(to right,transparent 0%,#000 2%,#000 97%,transparent 100%)}
+.track{display:flex;align-items:center;flex:none;width:max-content;will-change:transform;animation:slide var(--duration,72s) linear infinite}.group{display:flex;align-items:center;flex:none;white-space:nowrap}
+.item{display:flex;align-items:center;gap:12px;padding:7px 23px;height:100%;white-space:nowrap}.gift-emoji{display:grid;place-items:center;font-size:30px;width:42px;height:48px;filter:drop-shadow(0 0 7px rgba(186,111,255,.55))}.gift-name{font-size:17px;font-weight:900;color:#fff}.effect{font-size:14px;color:#e7d1fa;margin-top:5px;font-weight:700}.price{color:#ffd97d;font-size:13px;font-weight:900;border:1px solid rgba(255,207,95,.5);border-radius:30px;padding:5px 8px;margin-left:4px}.key{font-weight:900;background:#9c54f0;border:1px solid #d6adff;border-radius:7px;padding:8px 10px;font-size:16px;box-shadow:0 0 10px rgba(192,128,255,.3)}.separator{font-size:19px;color:#d59bff;text-shadow:0 0 9px #9d5afb}
+@keyframes slide{to{transform:translateX(calc(-1 * var(--distance,50%)))}}
+@media(max-width:600px){:root{--height:76px}.brand{min-width:148px;padding:8px 10px}.brand .name{font-size:14px}.brand .sub{font-size:10px}.gift-name{font-size:15px}.effect{font-size:12px}.item{gap:8px;padding:7px 15px}.gift-emoji{font-size:26px;width:33px}.key{font-size:14px;padding:6px}}
+@media(prefers-reduced-motion:reduce){.track{animation:none}}
+</style></head><body>
+<div class="ticker"><div class="brand"><div class="name">💜 GURLDADGAGE</div><div class="sub">⚡ CHAOS LAB · GIFTS</div></div><div class="viewport"><div class="track" id="track"><div class="group" id="groupA"></div><div class="group" id="groupB" aria-hidden="true"></div></div></div></div>
+<script>
+// MANUAL STREAM VERSION. Match gift names and coin values to your TikTok LIVE gift picker.
+// F2–F7 spawning/ammo are experimental and must be verified in-game. Only enable shown rewards when functional.
+const gifts=[
+{emoji:'💧',name:'Rose',coins:'1',effect:'HYDRATE PLS',key:'SIP'},
+{emoji:'🫰',name:'Finger Heart',coins:'5',effect:'AMMO SUPPLY',key:'F5'},
+{emoji:'🌹',name:'Rosa',coins:'10',effect:'2 RUNNERS',key:'F2'},
+{emoji:'🍩',name:'Doughnut',coins:'30',effect:'3 HUNTERS',key:'F3'},
+{emoji:'🫶',name:'Hand Heart',coins:'100',effect:'RANDOM AMBUSH',key:'F6'},
+{emoji:'🕶️',name:'Sunglasses',coins:'199',effect:'BLAST OFF!',key:'F9'},
+{emoji:'🐶',name:'Corgi',coins:'299',effect:'TANK ATTACK',key:'F4'},
+{emoji:'💸',name:'Money Gun',coins:'500',effect:'MACHINE SWARM',key:'F7'}
+];
+function makeItems(parent){gifts.forEach(g=>{let el=document.createElement('div');el.className='item';el.innerHTML=`<span class="gift-emoji" aria-hidden="true">${g.emoji}</span><div><div class="gift-name">${g.name}</div><div class="effect">${g.effect}</div></div><span class="price">🪙 ${g.coins}</span><span class="key">${g.key}</span>`;parent.append(el);let sep=document.createElement('span');sep.className='separator';sep.textContent='✦';parent.append(sep)})}
+const a=document.getElementById('groupA'),b=document.getElementById('groupB'),track=document.getElementById('track');makeItems(a);makeItems(b);
+function measure(){const width=a.getBoundingClientRect().width;track.style.setProperty('--distance',width+'px');track.style.setProperty('--duration',Math.max(28,width/95)+'s')}measure();window.addEventListener('resize',measure);
+</script></body></html>
