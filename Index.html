@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GurlDadGage | Generation Zero Chaos Gift Menu</title>
+<style>
+:root{--purple:#b76bff;--purple2:#7632d2;--panel:#0b0719e8;--edge:#b067fa90;--white:#f7f2ff;--muted:#c9b6de;--speed:33s}
+*{box-sizing:border-box}html,body{margin:0;background:transparent;color:var(--white);font-family:Arial,Helvetica,sans-serif;overflow:hidden}body{padding:8px}
+.panel{width:min(100%,430px);height:calc(100vh - 16px);min-height:340px;display:flex;flex-direction:column;overflow:hidden;background:linear-gradient(160deg,#201035f2,#0b0817e8 65%,#1a0b29ef);border:2px solid var(--edge);border-radius:24px;box-shadow:0 0 25px #8035da65,inset 0 0 25px #3e156a45;position:relative}
+.panel:before{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:linear-gradient(115deg,transparent 35%,#b55aff0b 50%,transparent 65%)}
+.head{padding:16px 16px 12px;background:linear-gradient(115deg,#38145f,#170e2c);border-bottom:1px solid #b36cf87a;position:relative;z-index:2;text-align:center}
+.eyebrow{font-size:12px;letter-spacing:3px;font-weight:900;color:#e6bcff}.title{font-size:27px;letter-spacing:1px;font-weight:1000;line-height:1.15;text-shadow:0 0 15px #ae51efaa}.sub{margin-top:5px;color:#e6d4f5;font-weight:800;font-size:12px;letter-spacing:1.8px}.tag{margin:8px auto 0;padding:5px 12px;border:1px solid #ce91ff66;border-radius:50px;background:#361550;font-size:11px;letter-spacing:1.1px;color:#f3dcff;width:max-content}
+.viewport{position:relative;flex:1;min-height:0;overflow:hidden;mask-image:linear-gradient(to bottom, transparent,black 6%,black 94%,transparent);-webkit-mask-image:linear-gradient(to bottom, transparent,black 6%,black 94%,transparent)}
+.track{display:flex;flex-direction:column;width:100%;animation:scroll var(--speed) linear infinite;will-change:transform}
+.viewport:hover .track{animation-play-state:paused}
+.batch{display:grid;grid-template-columns:1fr;align-content:start;gap:10px;padding:12px 13px}
+.gift{background:linear-gradient(105deg,#322046d9,#180f29ef);border:1px solid #a962ef66;border-left:4px solid #bb79ff;border-radius:13px;min-height:79px;padding:10px 11px;display:flex;align-items:center;gap:11px;box-shadow:0 4px 15px #0006}
+.emoji{display:grid;place-items:center;flex:none;background:#50227475;border-radius:12px;width:47px;height:47px;font-size:26px}.details{min-width:0;flex:1}.giftname{font-size:16px;font-weight:900;line-height:1.18}.coins{color:#ffe39d;font-size:12px;font-weight:800;margin:3px 0}.effect{font-size:13px;color:#e8d7ff;font-weight:700;line-height:1.25}.key{font-size:15px;font-weight:1000;background:linear-gradient(135deg,#a95bf0,#632ab9);padding:6px 8px;border-radius:9px;border:1px solid #e3b8ff55;white-space:nowrap}
+.foot{position:relative;z-index:2;padding:11px;background:linear-gradient(90deg,#351454,#210d36);border-top:1px solid #a970de66;text-align:center;font-size:12px;font-weight:800;letter-spacing:.6px;color:#ead2ff}
+.two .panel{width:min(100%,690px)}.two .batch{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:10px}.two .gift{padding:8px;min-height:84px;gap:7px}.two .emoji{width:36px;height:36px;font-size:21px}.two .giftname{font-size:14px}.two .effect{font-size:12px}.two .key{font-size:12px;padding:5px}.two .coins{font-size:11px}
+@media(max-width:470px){.two .batch{grid-template-columns:1fr}.two .panel{width:100%}}
+@media(prefers-reduced-motion:reduce){.track{animation:none}.viewport{overflow:auto}}
+</style>
+</head>
+<body>
+<div class="panel" aria-label="GurlDadGage Generation Zero scrolling gift menu">
+  <header class="head"><div class="eyebrow">GURLDADGAGE</div><div class="title">🤖 CHAOS LAB 💜</div><div class="sub">GENERATION ZERO • VIEWER WISHES</div><div class="tag">🎁 SEND A GIFT → TRIGGER CHAOS</div></header>
+  <div class="viewport" id="viewport"><div class="track" id="track">
+    <div class="batch" id="batch">
+      <div class="gift"><span class="emoji">🌹</span><div class="details"><div class="giftname">Rose</div><div class="coins">1 coin*</div><div class="effect">Ammo Drop</div></div><span class="key">F5</span></div>
+      <div class="gift"><span class="emoji">🫰</span><div class="details"><div class="giftname">Finger Heart</div><div class="coins">5 coins*</div><div class="effect">2 Runners</div></div><span class="key">F2</span></div>
+      <div class="gift"><span class="emoji">🍩</span><div class="details"><div class="giftname">Doughnut</div><div class="coins">30 coins*</div><div class="effect">3 Hunters</div></div><span class="key">F3</span></div>
+      <div class="gift"><span class="emoji">🫶</span><div class="details"><div class="giftname">Hand Heart</div><div class="coins">100 coins*</div><div class="effect">Tank Attack</div></div><span class="key">F4</span></div>
+      <div class="gift"><span class="emoji">🐶</span><div class="details"><div class="giftname">Corgi</div><div class="coins">299 coins*</div><div class="effect">Random Ambush</div></div><span class="key">F6</span></div>
+      <div class="gift"><span class="emoji">💸</span><div class="details"><div class="giftname">Money Gun</div><div class="coins">500 coins*</div><div class="effect">Machine Swarm</div></div><span class="key">F7</span></div>
+      <div class="gift"><span class="emoji">🌌</span><div class="details"><div class="giftname">Galaxy</div><div class="coins">1,000 coins*</div><div class="effect">BLAST OFF! 🚀</div></div><span class="key">F9</span></div>
+    </div>
+  </div></div>
+  <footer class="foot">✦ YOU GIFT • I SUFFER ✦</footer>
+</div>
+<script>
+const params=new URLSearchParams(location.search);
+if(params.get('cols')==='2')document.body.classList.add('two');
+const speed=Number(params.get('seconds'));
+if(Number.isFinite(speed)&&speed>=10&&speed<=180)document.documentElement.style.setProperty('--speed',speed+'s');
+const batch=document.getElementById('batch'),track=document.getElementById('track');
+const duplicate=batch.cloneNode(true);duplicate.removeAttribute('id');duplicate.setAttribute('aria-hidden','true');track.appendChild(duplicate);
+const style=document.createElement('style');style.textContent='@keyframes scroll{from{transform:translateY(0)}to{transform:translateY(-50%)}}';document.head.appendChild(style);
+</script>
+</body></html>
